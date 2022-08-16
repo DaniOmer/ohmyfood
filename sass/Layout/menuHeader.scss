@@ -1,0 +1,19 @@
+/************ Header des pages de menu **************/
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+    &__title{
+        font-family: $logo;
+        font-size: 25px;
+    }
+    &__fav{
+        font-size: 25px;
+        color: #000;
+        position: absolute;
+        left: 20px;
+    }
+}

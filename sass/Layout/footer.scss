@@ -1,0 +1,20 @@
+/************ FOOTER ****************/
+
+footer{
+    color: #fff;
+    background-color: darken($color: $tertiaire, $amount: 57);
+    padding: 10px 30px;
+    h2{
+        font-size: 16px;
+        font-family: $logo;
+    }
+    a{
+        display: inline-block;
+        color: #fff;
+        margin-bottom: 10px;
+    }
+    .fa-solid{
+        width: 15px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,41 @@
+/************ Style généraux du site ***************/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: $texte, Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+h1, h2{
+    margin: 20px 0;
+}
+
+h1{
+    font-size: 24px;
+}
+
+h2{
+    font-size: 22px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+p{
+    font-size: 18px;
+}
+
+ul, li{
+    list-style: none;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
