@@ -4,15 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://kit.fontawesome.com/d544cf6842.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet"> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css" type="text/css">
+    
     <title>À la française</title>
 </head>
 
+<!--- FInir d'intégrer les classes dans la partie menu content sur cette page et les autres pages de menu. 
+Pensez à changer le lien de redirection vers l'acceui pour les autres pages de menu-->
+
+
 <body>
-    <header>
-        <a href="index.html"><i class="fa-regular fa-arrow-left"></i></a>
-        <p>ohmyfood</p>
+    <header class="header">
+        <a href="../index.html" class="header__fav"><i class="fa-solid fa-arrow-left"></i></a>
+        <p class="header__title">ohmyfood</p>
     </header>
+
 
     <main>
         <div class="menu">
@@ -26,154 +43,130 @@
                 </div>
 
                 <div class="dishes">
-                    <div class="dishes__kind">
-                        <p>ENTRÉES</p>
-                    </div>
+                    <p class="dishes__title">Entrées</p>
 
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Tartare de poulpe acidulé</h2>
-                                <p>Aux zests d'orange</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">25€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Tartare de poulpe acidulé</h2>
+                            <p>Aux zests d'orange</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">25€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Vélouté de légumes d'antan</h2>
-                                <p>Carotte, panais, topinambour</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">35€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="" class="choice">
+                        <div class="choice__left">
+                            <h2>Vélouté de légumes d'antan</h2>
+                            <p>Carotte, panais, topinambour</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">35€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Soupe à l'oignon</h2>
-                                <p>Revisitée</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">20€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Soupe à l'oignon</h2>
+                            <p>Revisitée</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">20€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
                 </div>
 
                 <div class="dishes">
-                    <div class="dishes__kind">
-                        <p>PLATS</p>
-                    </div>
+                    <p class="dishes__title">Plats</p>
 
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Coquille Saint-Jacques</h2>
-                                <p>Accompagné d'une purée de panais</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">40€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Coquille Saint-Jacques</h2>
+                            <p>Accompagné d'une purée de panais</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">40€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Magret de canard</h2>
-                                <p>Et parmentier de pomme de terres</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">35€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Magret de canard</h2>
+                            <p>Et parmentier de pomme de terres</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">35€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Pigeonneau d'Ille-et-Vilaine</h2>
-                                <p>Sur son lit de gnocchi aux légumes</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">44€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Pigeonneau d'Ille-et-Vilaine</h2>
+                            <p>Sur son lit de gnocchi aux légumes</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">44€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
                 </div>
 
                 <div class="dishes">
-                    <div class="dishes__kind">
-                        <p>DESSERTS</p>
-                    </div>
+                    <p class="dishes__title">Desserts</p>
 
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Pétales de violettes glacés</h2>
-                                <p>Et purée de noisette</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">18€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Pétales de violettes glacés</h2>
+                            <p>Et purée de noisette</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">18€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Fondant au chocolat</h2>
-                                <p>Revisité</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">22€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Fondant au chocolat</h2>
+                            <p>Revisité</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">22€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
-                    <a href="#">
-                        <div class="choice">
-                            <div class="choice__left">
-                                <h2>Millefeuille croustillant</h2>
-                                <p>Myrtilles et pâtes d'amande</p>
-                            </div>
-                            <div class="choice__middle">
-                                <span class="price">23€</span>
-                            </div>
-                            <div class="choice__right">
-                                <i class="fa-regular fa-circle-check"></i>
-                            </div>
+                    <a href="#" class="choice">
+                        <div class="choice__left">
+                            <h2>Millefeuille croustillant</h2>
+                            <p>Myrtilles et pâtes d'amande</p>
+                        </div>
+                        <div class="choice__middle">
+                            <span class="price">23€</span>
+                        </div>
+                        <div class="choice__right">
+                            <i class="fa-solid fa-circle-check"></i>
                         </div>
                     </a>
                 </div>
-
+                
                 <div class="order">
-                    <button class="order__btn">Commander</button>
+                    <button class="button order__button">Commander</button>
                 </div>
             </div>  
         </div>
@@ -181,14 +174,14 @@
 
     <!-- Pied de page-->
     <footer>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo">
+        <h2>ohmyfood</h2>
         <ul>
             <li>
-                <i class="fa-regular fa-utensils"></i>
+                <i class="fa-solid fa-utensils"></i>
                 <a href="#">Proposez un restaurant</a>
             </li>
             <li>
-                <i class="fa-regular fa-handshake-angle"></i>
+                <i class="fa-solid fa-handshake-angle"></i>
                 <a href="#">Devenir partenaire</a>
             </li>
             <li><a href="#">Mentions légales</a></li>

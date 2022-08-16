@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <script src="https://kit.fontawesome.com/d544cf6842.js" crossorigin="anonymous"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,61 +15,63 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="styles.css" type="text/css">
+
     <title>Oh My Food</title>
 </head>
 
 <body>
+    
+    <div id="wrapper">
+            <!-- Entête de notre site-->
+        <header class="mainHeader">
+            <img src="images/logo/ohmyfood@2x.svg" alt="logo">
+        </header>
 
-    <!-- Entête de notre site-->
-    <header>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo">
-    </header>
+        <main>
 
-    <main>
-
-        <!--  Section exploration allant du formulaire au bouton Explorer-->
-        <section class="explore">
-            <div class="explore__where">
-                <form>
-                    <i class="fa-solid fa-location-dot"></i>
-                    <input type="text" name="recherche-ville" placeholder="Paris, Belleville">
-                </form>
-            </div>
-            <div class="explore__book">
-                <h1>Réserver le menu qui vous convient</h1>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <p><a href="#">Explorez nos restaurants</a></p>
-            </div>
-        </section>
-
-
-        <!-- Section contenant les cartes de restaurant-->
-        <section class="working">
-            <h2>Fonctionnement</h2>
-            <div class="working__detail">
-                <div class="working__detail--button">
-                    <p class="working__detail--circle">1</p>
-                    <i class="fa-solid fa-mobile-screen-button"></i>
-                    <h3>Choisissez un restaurant</h3>
+            <!--  Section exploration allant du formulaire au bouton Explorer-->
+            <section class=" first explore">
+                <div class="explore__where">
+                    <form>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" name="recherche-ville" placeholder="Paris, Belleville">
+                    </form>
                 </div>
-                <div class="working__detail--button">
-                    <p class="working__detail--circle">2</p>
-                    <i class="fa-solid fa-list"></i>
-                    <h3>Composez votre menu</h3>
+                <div class="explore__book">
+                    <h1>Réservez le menu qui vous convient</h1>
+                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <button class="button">Explorez nos restaurants</button>
                 </div>
-                <div class="working__detail--button">
-                    <p class="working__detail--circle">3</p>
-                    <i class="fa-solid fa-store"></i>
-                    <h3>Dégustez au restaurant</h3>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="restaurant">
-            <h2>restaurants</h2>
-            <div class="resto">
-                <div class="resto__card">
-                    <a href="menu/laPaletteDuGout.html">
+
+            <!-- Section contenant les cartes de restaurant-->
+            <section class="second">
+                <h2>Fonctionnement</h2>
+                <div class="working">
+                    <div class="working__button">
+                        <p class="working__button--circle">1</p>
+                        <i class="fa-solid fa-mobile-screen-button working__button--fav"></i>
+                        <h3 class="working__button--title">Choisissez un restaurant</h3>
+                    </div>
+                    <div class="working__button">
+                        <p class="working__button--circle">2</p>
+                        <i class="fa-solid fa-list working__button--fav"></i>
+                        <h3 class="working__button--title">Composez votre menu</h3>
+                    </div>
+                    <div class="working__button">
+                        <p class="working__button--circle">3</p>
+                        <i class="fa-solid fa-store working__button--fav"></i>
+                        <h3 class="working__button--title">Dégustez au restaurant</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="restaurant">
+                <h2>Restaurants</h2>
+                <div class="resto">
+                    <a href="menu/laPaletteDuGout.html" class="resto__card">
                         <div class="resto__card__img">
                             <img src="images/restaurants/palette-du-gout.jpg" alt="La palette du goût">
                             <p class="resto__card__new">Nouveau</p>
@@ -84,9 +86,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="resto__card">
-                    <a href="menu/laNoteEnchantee.html">
+                    <a href="menu/laNoteEnchantee.html" class="resto__card">
                         <div class="resto__card__img">
                             <img src="images/restaurants/note-enchantee.jpg" alt="La note enchantée">
                             <p class="resto__card__new">Nouveau</p>
@@ -101,9 +101,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="resto__card">
-                    <a href="menu/aLaFrancaise.html">
+                    <a href="menu/aLaFrancaise.html" class="resto__card">
                         <div class="resto__card__img">
                             <img src="images/restaurants/palette-du-gout.jpg" alt="À la française">
                         </div>
@@ -117,9 +115,7 @@
                             </div>
                         </div>
                     </a>
-                </div>
-                <div class="resto__card">
-                    <a href="menu/leDeliceDesSens.html">
+                    <a href="menu/leDeliceDesSens.html" class="resto__card">
                         <div class="resto__card__img">
                             <img src="images/restaurants/delice-des-ses.jpg" alt="Les délices des sens">
                         </div>
@@ -134,25 +130,26 @@
                         </div>
                     </a>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <!-- Pied de page-->
-    <footer>
-        <img src="images/logo/ohmyfood@2x.svg" alt="logo">
-        <ul>
-            <li>
-                <i class="fa-regular fa-utensils"></i>
-                <a href="#">Proposez un restaurant</a>
-            </li>
-            <li>
-                <i class="fa-regular fa-handshake-angle"></i>
-                <a href="#">Devenir partenaire</a>
-            </li>
-            <li><a href="#">Mentions légales</a></li>
-            <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
-        </ul>
-    </footer>
+        <!-- Pied de page-->
+        <footer>
+            <h2>ohmyfood</h2>
+            <ul>
+                <li>
+                    <i class="fa-solid fa-utensils"></i>
+                    <a href="#">Proposez un restaurant</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <a href="#">Devenir partenaire</a>
+                </li>
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+            </ul>
+        </footer>
+    </div>
+
 </body>
 </html>
