@@ -275,6 +275,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 .menu .choice__right {
   flex: 1;
