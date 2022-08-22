@@ -1,19 +1,24 @@
-/******** Couleurs du site *********/
-$primaire: #9356DC ;
-$secondaire: #FF79DA ;
-$tertiaire: #99E2D0 ;
 
+$primary: #9356DC ;
+$secondary: #FF79DA ;
+$tertiary: #99E2D0 ;
+$grey-1 : #f6f6f6 ;
+$grey-2: #eaeaea ;
 
-/********* Police du site ********/
+$buttonColor : linear-gradient($secondary, $primary) ;
+
 $logo: 'Shrikhand' ;
 $texte: 'Roboto' ;
 
 
-/************* Les médias queries ************/
+$thin: 3px;
+$thick: 9px;
+
+
 $small: 767px ;
 $medium: 991px ;
-$large: 992px ;
+$large: 1024px ;
 
-$mobile: 'only screen and (max-width: #{$small}' ;
-$tablet: 'only screen and (max-width: #{$medium}' ;
-$desktop: 'only screen and (min-width: #{$large}' ;
+$mobile: 'only screen and (max-width: #{$small})' ;
+$tablet: 'only screen and (max-width: #{$medium})' ;
+$desktop: 'only screen and (min-width: #{$large})' ;
