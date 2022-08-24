@@ -33,9 +33,14 @@
         margin-bottom: 50px;
         &__title{
             text-transform: uppercase;
-            width: 40px;
-            padding-bottom: 5px;
-            border-bottom: 3px solid $tertiary;
+            &::after{
+                content: '';
+                display: block;
+                height: 3px;
+                width: 40px;
+                margin-top: 5px;
+                background-color: $tertiary;
+            }
         }
     }
     .choice{
@@ -48,7 +53,7 @@
         background-color: #fff;
         border-radius: 20px;
         box-shadow: 1px 2px 6px $tertiary;
-        //border: 1px solid;
+        animation: slideDown 1.5s ease-in-out;
         &__left{
             min-width: 220px;
             height: 100%;
@@ -105,5 +110,16 @@
         width: 50%;
         margin-top: 0;
         margin-bottom: 60px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }

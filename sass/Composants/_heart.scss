@@ -1,23 +1,33 @@
-.fa-heart:hover {
-    font-family: fontawesome;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-image: linear-gradient($primary 20%, $secondary);
-    animation: pulse 0.8s ease-in-out infinite;
+.fa-heart{
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    //background-color: $grey-1;
+    //z-index: 2;
+    
+    &::after{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: '\f004';
+        font-family: fontawesome;
+        -webkit-text-fill-color: transparent ;
+        -webkit-background-clip: text; 
+    }
+    &:hover::after{
+        background-image: linear-gradient($primary 20%, $secondary);
+        animation: fillIn .3s ease-in-out;
+        transform-origin: bottom;
+    }
+    
   }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      background-size: 0%;
-    }
-    50% {
-      transform: scale(1.2);
-      background-size: 50%;
-    }
-    100% {
-      transform: scale(1);
-      background-size: 100%;
-    }
+
+  @keyframes fillIn {
+      0% {
+        transform: scale(0);
+      }
+      100% {
+        transform: scale(1);
+      }
   }
