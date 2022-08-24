@@ -338,7 +338,6 @@ a {
 .fa-heart {
   cursor: pointer;
   position: relative;
-  overflow: hidden;
 }
 .fa-heart::after {
   display: block;
@@ -348,6 +347,7 @@ a {
   content: "\f004";
   font-family: fontawesome;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
 }
 .fa-heart:hover::after {
@@ -362,6 +362,18 @@ a {
   }
   100% {
     transform: scale(1);
+  }
+}
+.fa-circle-check {
+  animation: rotate 0.5s ease-in-out both;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 /************ Header des pages de menu **************/
