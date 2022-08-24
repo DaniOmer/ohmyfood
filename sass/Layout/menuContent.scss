@@ -53,7 +53,8 @@
         background-color: #fff;
         border-radius: 20px;
         box-shadow: 1px 2px 6px $tertiary;
-        animation: slideDown 1.5s ease-in-out;
+        -webkit-animation: slideDown 1.5s ease-in-out;
+                animation: slideDown 1.5s ease-in-out;
         &__left{
             min-width: 220px;
             height: 100%;
@@ -110,6 +111,17 @@
         width: 50%;
         margin-top: 0;
         margin-bottom: 60px;
+    }
+}
+
+@-webkit-keyframes slideDown {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 
