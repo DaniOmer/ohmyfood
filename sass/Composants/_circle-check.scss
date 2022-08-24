@@ -1,5 +1,15 @@
 .fa-circle-check{
-    animation: rotate .5s ease-in-out both;
+    -webkit-animation: rotate .5s ease-in-out both;
+            animation: rotate .5s ease-in-out both;
+}
+
+@-webkit-keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes rotate {
