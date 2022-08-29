@@ -499,7 +499,7 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .menu__desc__title {
-    width: 1067px;
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -511,7 +511,7 @@ a {
 }
 @media only screen and (min-width: 992px) {
   .menu__desc__content {
-    width: 1067px;
+    width: 90%;
     margin: 0 auto;
   }
 }
