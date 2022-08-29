@@ -160,9 +160,14 @@
 .order{
     text-align: center;
     &__button{
-        width: 30%;
         margin-top: 0;
         margin-bottom: 60px;
+        @media #{$tablet} {
+            width: 30%;
+        }
+        @media #{$desktop} {
+            width: 30%;
+        }
     }
 }
 
