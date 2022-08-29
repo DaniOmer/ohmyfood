@@ -4,3 +4,8 @@
     display: flex;
     flex-flow: $direction $flow;
 }
+
+@mixin menuElement {
+    width: 1067px;
+    margin: 0 auto;
+}

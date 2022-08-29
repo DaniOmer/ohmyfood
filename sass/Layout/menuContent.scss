@@ -1,36 +1,57 @@
 /******** Contenu des pages de menu **********/
 
 .menu{
-    display: flex;
-    flex-direction: column;
+    //@include flexbox(column, nowrap) ;
+    position: relative;
     &__img{
-        z-index: 1;
+        z-index: 0;
+        @media #{$tablet} {
+            height: 50vh;
+        }
+        @media #{$desktop} {
+            height: 40vh;
+        }
         img{
             width: 100%;
+            height: 100%;
+            -o-object-fit:cover;
+               object-fit:cover;
         }
     }
-    &__content{
-        z-index: 2;
+    &__desc{
+        z-index: 1;
+        position: relative;
+        margin-top: -50px;
         background-color: $grey-1;
         border-radius: 40px 40px 0 0;
-        margin-top: -50px;
-    }
-    &__title{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 40px 10px 20px;
-        h1{
-            font-family: $logo;
+        &__title{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px 10px 20px;
+            @media #{$desktop} {
+                @include menuElement ;
+            }
+            h1{
+                font-family: $logo;
+            }
+            i{
+                font-size: 22px;
+            }
         }
-        i{
-            font-size: 22px;
+        &__content{
+            @media #{$desktop} {
+                @include menuElement ;
+            }
         }
     }
+    
+    
     .dishes{
         padding-left: 20px;
         padding-right: 20px;
         margin-bottom: 50px;
+        width: 100%;
         &__title{
             text-transform: uppercase;
             &::after{
@@ -42,54 +63,85 @@
                 background-color: $tertiary;
             }
         }
+        &__content{
+            @media #{$tablet} {
+                @include flexbox(row, wrap) ;
+                justify-content: space-between;
+            }
+            @media #{$desktop} {
+                @include flexbox(row, wrap) ;
+                justify-content: space-between;
+            }
+        }
+        
     }
+
+
     .choice{
         color: #000;
-        display: flex;
+        @include flexbox(row, nowrap) ;
         align-items: center;
         justify-content: space-between;
         margin-top: 20px;
         height: 68px;
         background-color: #fff;
         border-radius: 20px;
-        box-shadow: 1px 2px 6px $tertiary;
+        box-shadow: 1px 1px 8px $grey;
         -webkit-animation: slideDown 1.5s ease-in-out;
                 animation: slideDown 1.5s ease-in-out;
+        @media #{$tablet} {
+            width: 49%;
+        }
+        @media #{$desktop} {
+            width: 32%;
+        }
+        
         &__left{
-            min-width: 220px;
             height: 100%;
+            width: 80%;
+            max-width: 301px;
             padding-left: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
         &__middle{
-            width: 50px;
+            max-width: 48px;
             font-size: 14px;
             height: 100%;
             padding-bottom: 10px;
-            margin-right: 10px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
         }
         &__right{
-            width: 50px;
-            display: none;
+            width: 0;
             height: 100%;
-            background-color: $tertiary;
+            opacity: 0;
+            background-color: $grey-2;
             border-radius: 0 20px 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s ease-in-out;
             .fa-circle-check{
                 color: #fff;
             }
         }
         &:hover{
+            .choice__left{
+                width: 60%;
+                max-width: 226px;
+            }
+            .choice__middle{
+                width: 20%;
+                max-width: 68px;
+            }
             .choice__right{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                transition: 0.1s ease-in-out;
+                width: 20%;
+                max-width: 68px;
+                opacity: 1;
             }
         }
         h2{
@@ -108,7 +160,7 @@
 .order{
     text-align: center;
     &__button{
-        width: 50%;
+        width: 30%;
         margin-top: 0;
         margin-bottom: 60px;
     }
@@ -135,3 +187,4 @@
         opacity: 1;
     }
 }
+

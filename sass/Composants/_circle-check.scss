@@ -1,22 +1,24 @@
-.fa-circle-check{
-    -webkit-animation: rotate 1s ease-in-out both;
-            animation: rotate 1s ease-in-out both;
-}
-
-@-webkit-keyframes rotate {
-    0%{
-        transform: rotate(0deg);
+.choice:hover{
+    .fa-circle-check{
+        -webkit-animation: rotate .5s ease-in-out forwards;
+                animation: rotate .5s ease-in-out forwards;
     }
-    100%{
-        transform: rotate(360deg);
+    
+    @-webkit-keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
     }
-}
-
-@keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
+    
+    @keyframes rotate {
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
     }
 }

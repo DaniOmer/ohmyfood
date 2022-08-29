@@ -13,8 +13,8 @@
         font-weight: 100;
         font-size: 40px;
         color: $primary;
-        -webkit-animation: loader-color 3s linear;
-                animation: loader-color 3s linear;
+        -webkit-animation: loader-color 3s linear infinite;
+                animation: loader-color 3s linear infinite;
     }
     &__spin {
         position: relative;
@@ -41,8 +41,8 @@
                     animation: spinnerReverse 2.5s linear infinite;
         }
     }
-    -webkit-animation: loader-kick .6s ease forwards 4s;
-            animation: loader-kick .6s ease forwards 4s;
+    -webkit-animation: loader-kick 0.3s ease forwards 3s;
+            animation: loader-kick 0.3s ease forwards 3s;
 }
   
   

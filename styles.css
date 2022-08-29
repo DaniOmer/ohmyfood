@@ -63,7 +63,7 @@ a {
   width: 100%;
   text-align: center;
   padding: 10px;
-  box-shadow: 1px 4px 8px #99E2D0;
+  box-shadow: 0 1px 6px #808080;
   margin-bottom: 4px;
 }
 
@@ -116,13 +116,18 @@ a {
 }
 
 .working {
-  display: flex;
-  flex-direction: column;
   padding-left: 10px;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .working {
-    flex-direction: row;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .working {
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: center;
   }
 }
@@ -130,17 +135,22 @@ a {
   display: flex;
   position: relative;
   margin-bottom: 20px;
-  margin-left: 30px;
   border-radius: 20px;
-  box-shadow: 1px 4px 6px #99E2D0;
   padding: 30px 10px 30px 30px;
   background-color: #f6f6f6;
+  box-shadow: 3px 6px 8px #eaeaea;
+  cursor: pointer;
 }
 .working__button:hover {
   background-color: #f2eafb;
 }
 .working__button:hover .working__button--fav {
   color: #9356DC;
+}
+@media only screen and (min-width: 992px) {
+  .working__button {
+    margin-left: 30px;
+  }
 }
 .working__button--circle {
   position: absolute;
@@ -160,7 +170,7 @@ a {
 }
 .working__button--fav {
   font-size: 20px;
-  color: #278870;
+  color: #808080;
 }
 
 /********** Section contenant les cartes de restaurant ************/
@@ -169,24 +179,18 @@ a {
   background-color: #f6f6f6;
 }
 
-.resto {
-  display: flex;
-}
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   .resto {
-    flex-flow: row nowrap;
-    justify-content: space-between;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .resto {
+    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
   .resto {
-    flex-direction: column;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
   }
 }
 .resto__card {
@@ -196,22 +200,17 @@ a {
   flex-direction: column;
   margin-bottom: 20px;
   border-radius: 20px;
-  box-shadow: 1px 4px 6px #99E2D0;
+  box-shadow: 2px 2px 8px #808080;
   position: relative;
 }
-@media only screen and (min-width: 1024px) {
-  .resto__card {
-    width: 24%;
-  }
-}
-@media only screen and (max-width: 991px) {
+@media only screen and (min-width: 768px) {
   .resto__card {
     width: 49%;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 992px) {
   .resto__card {
-    width: 100%;
+    width: 24%;
   }
 }
 .resto__card__img img {
@@ -250,7 +249,7 @@ a {
   padding: 15px 25px;
   border-radius: 30px;
   border: none;
-  box-shadow: 1px 2px 8px grey;
+  box-shadow: 1px 2px 8px #808080;
   cursor: pointer;
   opacity: 1;
   transition: all 600ms;
@@ -269,16 +268,16 @@ a {
   flex-direction: column;
   justify-content: center;
   gap: 42px;
-  -webkit-animation: loader-kick 0.6s ease forwards 4s;
-  animation: loader-kick 0.6s ease forwards 4s;
+  -webkit-animation: loader-kick 0.3s ease forwards 3s;
+  animation: loader-kick 0.3s ease forwards 3s;
 }
 .loader p {
   font-family: "Shrikhand", cursive;
   font-weight: 100;
   font-size: 40px;
   color: #9356DC;
-  -webkit-animation: loader-color 3s linear;
-  animation: loader-color 3s linear;
+  -webkit-animation: loader-color 3s linear infinite;
+  animation: loader-color 3s linear infinite;
 }
 .loader__spin {
   position: relative;
@@ -422,11 +421,10 @@ a {
     transform: scale(1);
   }
 }
-.fa-circle-check {
-  -webkit-animation: rotate 1s ease-in-out both;
-  animation: rotate 1s ease-in-out both;
+.choice:hover .fa-circle-check {
+  -webkit-animation: rotate 0.5s ease-in-out forwards;
+  animation: rotate 0.5s ease-in-out forwards;
 }
-
 @-webkit-keyframes rotate {
   0% {
     transform: rotate(0deg);
@@ -443,6 +441,7 @@ a {
     transform: rotate(360deg);
   }
 }
+
 /************ Header des pages de menu **************/
 .header {
   display: flex;
@@ -464,37 +463,63 @@ a {
 
 /******** Contenu des pages de menu **********/
 .menu {
-  display: flex;
-  flex-direction: column;
+  position: relative;
 }
 .menu__img {
-  z-index: 1;
+  z-index: 0;
+}
+@media only screen and (min-width: 768px) {
+  .menu__img {
+    height: 50vh;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu__img {
+    height: 40vh;
+  }
 }
 .menu__img img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
-.menu__content {
-  z-index: 2;
+.menu__desc {
+  z-index: 1;
+  position: relative;
+  margin-top: -50px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
-  margin-top: -50px;
 }
-.menu__title {
+.menu__desc__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 40px 10px 20px;
 }
-.menu__title h1 {
+@media only screen and (min-width: 992px) {
+  .menu__desc__title {
+    width: 1067px;
+    margin: 0 auto;
+  }
+}
+.menu__desc__title h1 {
   font-family: "Shrikhand";
 }
-.menu__title i {
+.menu__desc__title i {
   font-size: 22px;
+}
+@media only screen and (min-width: 992px) {
+  .menu__desc__content {
+    width: 1067px;
+    margin: 0 auto;
+  }
 }
 .menu .dishes {
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 50px;
+  width: 100%;
 }
 .menu .dishes__title {
   text-transform: uppercase;
@@ -507,53 +532,89 @@ a {
   margin-top: 5px;
   background-color: #99E2D0;
 }
+@media only screen and (min-width: 768px) {
+  .menu .dishes__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu .dishes__content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
 .menu .choice {
   color: #000;
   display: flex;
+  flex-flow: row nowrap;
   align-items: center;
   justify-content: space-between;
   margin-top: 20px;
   height: 68px;
   background-color: #fff;
   border-radius: 20px;
-  box-shadow: 1px 2px 6px #99E2D0;
+  box-shadow: 1px 1px 8px #808080;
   -webkit-animation: slideDown 1.5s ease-in-out;
   animation: slideDown 1.5s ease-in-out;
 }
+@media only screen and (min-width: 768px) {
+  .menu .choice {
+    width: 49%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .menu .choice {
+    width: 32%;
+  }
+}
 .menu .choice__left {
-  min-width: 220px;
   height: 100%;
+  width: 80%;
+  max-width: 301px;
   padding-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 .menu .choice__middle {
-  width: 50px;
+  max-width: 48px;
   font-size: 14px;
   height: 100%;
   padding-bottom: 10px;
-  margin-right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
 }
 .menu .choice__right {
-  width: 50px;
-  display: none;
+  width: 0;
   height: 100%;
-  background-color: #99E2D0;
+  opacity: 0;
+  background-color: #eaeaea;
   border-radius: 0 20px 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-in-out;
 }
 .menu .choice__right .fa-circle-check {
   color: #fff;
 }
+.menu .choice:hover .choice__left {
+  width: 60%;
+  max-width: 226px;
+}
+.menu .choice:hover .choice__middle {
+  width: 20%;
+  max-width: 68px;
+}
 .menu .choice:hover .choice__right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.1s ease-in-out;
+  width: 20%;
+  max-width: 68px;
+  opacity: 1;
 }
 .menu .choice h2 {
   font-size: 16px;
@@ -568,7 +629,7 @@ a {
   text-align: center;
 }
 .order__button {
-  width: 50%;
+  width: 30%;
   margin-top: 0;
   margin-bottom: 60px;
 }

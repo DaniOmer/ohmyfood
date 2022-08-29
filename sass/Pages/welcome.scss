@@ -4,7 +4,7 @@
     width: 100%;
     text-align: center;
     padding: 10px;
-    box-shadow: 1px 4px 8px $tertiary;
+    box-shadow: 0 1px 6px $grey;
     margin-bottom: 4px;
 }
 
@@ -66,28 +66,32 @@
 }
 
 .working{
-    display: flex;
-    flex-direction: column;
     padding-left: 10px;
+    @media #{$tablet} {
+        @include flexbox(column, nowrap);
+    }
     @media #{$desktop} {
-        flex-direction : row ;
+        @include flexbox(row, nowrap);
         justify-content: center;
     }
     &__button{
         display: flex;
         position: relative ;
         margin-bottom: 20px ;
-        margin-left: 30px;
         border-radius: 20px;
-        box-shadow: 1px 4px 6px $tertiary;
         padding: 30px 10px 30px 30px ;
         background-color: $grey-1 ;
+        box-shadow: 3px 6px 8px $grey-2 ;
+        cursor: pointer;
         @extend %center ;
         &:hover{
             background-color: lighten($color: $primary, $amount: 35);
             .working__button--fav{
                 color: $primary;
             }
+        }
+        @media #{$desktop} {
+            margin-left: 30px;
         }
     }
     &__button--circle{
@@ -110,7 +114,7 @@
     }
     &__button--fav{
         font-size: 20px;
-        color: darken($color: $tertiary, $amount: 40) ;
+        color: $grey ;
         @extend %center ;
     }
     
@@ -126,17 +130,13 @@
 }
 
 .resto{
-    display: flex;
-    @media #{$desktop} {
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
     @media #{$tablet} {
-        flex-flow: row wrap;
+        @include flexbox(row, wrap);
         justify-content: space-between;
     }
-    @media #{$mobile} {
-        flex-direction: column;
+    @media #{$desktop} {
+        @include flexbox(row, nowrap);
+        justify-content: space-between;
     }
     &__card{
         text-decoration: none;
@@ -145,16 +145,13 @@
         flex-direction: column;
         margin-bottom: 20px;
         border-radius: 20px;
-        box-shadow: 1px 4px 6px $tertiary;
+        box-shadow: 2px 2px 8px $grey;
         position: relative;
-        @media #{$desktop} {
-            width: 24%;
-        }
         @media #{$tablet} {
             width: 49%;
         }
-        @media #{$mobile} {
-            width: 100%;
+        @media #{$desktop} {
+            width: 24%;
         }
         &__img{ 
             img{
@@ -189,4 +186,3 @@
         }
     }
 }
-
